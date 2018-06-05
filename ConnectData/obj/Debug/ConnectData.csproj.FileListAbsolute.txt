@@ -1,0 +1,15 @@
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\ConnectData.exe.config
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\ConnectData.exe
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\ConnectData.pdb
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\EntityFramework.dll
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\EntityFramework.xml
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.Properties.Resources.resources
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.exe
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.pdb
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.FormAdd.resources
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.FormEdit.resources
+c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.FormList.resources
