@@ -12,4 +12,4 @@ c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\
 c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.pdb
 c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.FormAdd.resources
 c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.FormEdit.resources
-c:\users\user\documents\visual studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.FormList.resources
+C:\Users\User\Documents\Visual Studio 2013\Projects\ConnectData\ConnectData\obj\Debug\ConnectData.StudentView.resources

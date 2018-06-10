@@ -11,7 +11,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Fullname" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Birthday" Type="date" Nullable="false" />
