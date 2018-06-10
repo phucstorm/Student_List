@@ -13,10 +13,10 @@ namespace ConnectData
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StormEntities : DbContext
+    public partial class StormEntities1 : DbContext
     {
-        public StormEntities()
-            : base("name=StormEntities")
+        public StormEntities1()
+            : base("name=StormEntities1")
         {
         }
     

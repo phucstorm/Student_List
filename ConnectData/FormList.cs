@@ -10,9 +10,30 @@ using System.Windows.Forms;
 
 namespace ConnectData
 {
+    public partial class StudentView
+    {
+        public int Id { get; set; }
+        public string Code { get; set; }
+        public string Fullname { get; set; }
+        public System.DateTime Birthday { get; set; }
+        public int Class_id { get; set; }
+
+        public virtual Class Class { get; set; }
+        public string ClassName
+        {
+            get
+            {
+                if (this.Class != null)
+                    return this.Class.Name;
+                else
+                    return null;
+            }
+        }
+    }
+
     public partial class FormList : Form
     {
-        StormEntities db = new StormEntities();
+        StormEntities1 db = new StormEntities1();
         public FormList()
         {
             InitializeComponent();
@@ -24,7 +45,15 @@ namespace ConnectData
         }
         private void loadStudent()
         {
-            this.lstStudent.DataSource = db.Students.ToList();   
+            this.lstStudent.DataSource = db.Students.Select(s => new StudentView
+            {
+                Id = s.Id,
+                Code = s.Code,
+                Fullname = s.Fullname,
+                Birthday = s.Birthday,
+                Class = s.Class
+            }).ToList();
+            this.lstStudent.Columns["Id"].Visible = false;
             this.lstStudent.Columns["Class"].Visible = false;
             this.lstStudent.Columns["Class_id"].Visible = false;
         }
@@ -39,10 +68,16 @@ namespace ConnectData
         private void btEdit_Click(object sender, EventArgs e)
         {
             if(this.lstStudent.SelectedRows.Count == 1){
-
                 var row = this.lstStudent.SelectedRows[0];
-                var item = (Student)row.DataBoundItem;
-                var edit = new FormEdit(item);
+                var item = (StudentView)row.DataBoundItem;
+                var edit = new FormEdit(new Student
+                {
+                    Id = item.Id,
+                    Code = item.Code,
+                    Fullname = item.Fullname,
+                    Birthday = item.Birthday,
+                    Class = item.Class
+                });
                 edit.ShowDialog();
                 loadStudent();
             }
@@ -50,12 +85,12 @@ namespace ConnectData
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            var db = new StormEntities();
-            if(MessageBox.Show("Are u sure ?", "Confirm", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes){
+            var db = new StormEntities1();
+            if(MessageBox.Show("Are u sure ?", "Warning!!", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes){
                 for (int i = 0; i < this.lstStudent.SelectedRows.Count; i++)
                 {
                     var row = this.lstStudent.SelectedRows[i];
-                    var item = (Student)row.DataBoundItem;
+                    var item = (StudentView)row.DataBoundItem;
                     try
                     {
                         Student student = db.Students.Find(item.Id);
@@ -64,7 +99,7 @@ namespace ConnectData
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Cannot delete class " + item);
+                        MessageBox.Show("Cannot delete student " + item);
                     }
                     
                 }

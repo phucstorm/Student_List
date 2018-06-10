@@ -12,23 +12,21 @@ namespace ConnectData
 {
     public partial class FormEdit : Form
     {
-        StormEntities db;
+        StormEntities1 db;
         Student std;
         public FormEdit(Student std)
         {
             InitializeComponent();
             this.std = std;
-            db = new StormEntities();
+            db = new StormEntities1();
         }
-
         private void btCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void btSave_Click(object sender, EventArgs e)
         {
-            var db = new StormEntities();
+            var db = new StormEntities1();
             var newStudent = db.Students.Find(this.std.Id);
             newStudent.Fullname = this.txtName.Text;
             newStudent.Code = this.txtCode.Text;

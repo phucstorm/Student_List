@@ -12,12 +12,11 @@ namespace ConnectData
 {
     public partial class FormAdd : Form
     {
-        StormEntities db = new StormEntities();
+        StormEntities1 db = new StormEntities1();
         public FormAdd()
         {
             InitializeComponent();
         }
-
         private void FormAdd_Load(object sender, EventArgs e)
         {
             this.cbClass.DataSource = db.Classes.ToList();
@@ -32,24 +31,18 @@ namespace ConnectData
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            // gán trường dữ liệu trên design
             int Class_id = (int)this.cbClass.SelectedValue;
             string code = this.txtCode.Text;
             string name = this.txtName.Text;
-
-            // khai báo SQL và gán dữ liệu trên design vào các cột trên bảng std của data
             Student newStudent = new Student();
             newStudent.Code = code;
             newStudent.Fullname = name;
             newStudent.Class_id = Class_id;
-            newStudent.Birthday = this.dtDob.Value; // .value lấy giá trị ngày tháng năm của datatimepicker trên design
-            
-            // lưu dữ liệu đã nhập vào bảng std
+            newStudent.Birthday = this.dtDob.Value;
             db.Students.Add(newStudent);
             db.SaveChanges();
             this.Close();
-            // show tin nhắn thông báo fuck u
-            MessageBox.Show("Thêm cmn thành công");
+            MessageBox.Show("Add student successfull","Notification");
         }
 
     }

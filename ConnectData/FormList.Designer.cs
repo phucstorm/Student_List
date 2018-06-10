@@ -75,8 +75,8 @@
             // btReload
             // 
             this.btReload.Name = "btReload";
-            this.btReload.Size = new System.Drawing.Size(55, 20);
-            this.btReload.Text = "Reload";
+            this.btReload.Size = new System.Drawing.Size(58, 20);
+            this.btReload.Text = "Refresh";
             this.btReload.Click += new System.EventHandler(this.btReload_Click);
             // 
             // lstStudent
